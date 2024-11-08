@@ -1,0 +1,295 @@
+.TodoList {
+  padding: 20px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.TodoList h3 {
+  text-align: start;
+  margin: 0 0 20px 0;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.add-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.filter-container input {
+  height: 30px;
+  padding: 0 5px;
+  width: max-content;
+  margin-bottom: 0.5rem;
+}
+
+.filter-container select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.todo-table {
+  width: 100%;
+}
+
+.table-container {
+  width: 100%;
+  height: 70vh;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.todo-table th,
+.todo-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.toggle-btn,
+.edit-btn,
+.delete-btn,
+.save-btn {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.action-btn-flex {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.edit-btn:hover {
+  background-color: #0069d9;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.save-btn {
+  background-color: #17a2b8;
+}
+
+.save-btn:hover {
+  background-color: #138496;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); 
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  animation: slideDown 0.3s ease; 
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.toggle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-toggle-btn {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-toggle-btn label {
+  margin-right: 5px;
+}
+
+.modal-content input[type="text"] {
+  width: 90%;
+  padding: 10px 10px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.modal-btn.close-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.modal-btn.delete-confirm-btn {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+}
+
+.modal-btn:not(.close-btn) {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.modal-btn:hover.delete-confirm-btn {
+  background-color: #c9302c;
+}
+
+.modal-btn:hover:not(.close-btn, .delete-confirm-btn) {
+  background-color: #4cae4c;
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.modal-exit {
+  opacity: 1;
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.todo-table {
+  width: 100%;
+}
+
+.table-container {
+  width: 100%;
+  max-height: 70vh;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+.todo-table th,
+.todo-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .todo-table thead {
+    display: none;
+  }
+
+  .todo-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .todo-table td {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: 10px 5px;
+  }
+
+  .todo-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+    width: 50%;
+    text-align: left;
+    padding-right: 10px;
+  }
+}

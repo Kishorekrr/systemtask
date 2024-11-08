@@ -1,0 +1,26 @@
+.Header {
+  background-color: #0000ff;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.Header h3 {
+  margin: 0;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: start;
+}
+
+.Header-container {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Logout-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 10px;
+}

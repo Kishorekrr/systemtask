@@ -1,0 +1,221 @@
+.ProfileContainer {
+  display: flex;
+  height: 100%;
+}
+
+.ProfileCard {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.ProfileHeader {
+  text-align: center;
+  position: relative;
+}
+
+.ProfilePhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.Profession {
+  font-size: 14px;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.Ranking {
+  font-size: 12px;
+  color: #666;
+}
+
+.EditProfileButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #007bff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: max-content;
+  color: #fff;
+}
+
+.ProfileContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media (min-width: 501px) {
+  .ProfileDetails,
+  .ProfileLinks,
+  .ProfileSkills {
+    width: 30%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .EditProfileButton {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: max-content;
+    color: #fff;
+    font-size: 10px;
+  }
+  .ProfileContent {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    overflow: auto;
+    width: 100%;
+    row-gap: 10px;
+  }
+  .ProfileDetails,
+  .ProfileLinks,
+  .ProfileSkills {
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  .ProfileDetails {
+    background-color: #b2d5f9;
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .ProfileLinks {
+    background-color: #b6d8b9;
+    padding: 0.5rem;
+    width: 90%;
+  }
+
+  .ProfileSkills {
+    background-color: #f9c9c9;
+    padding: 0.5rem;
+    width: 90%;
+  }
+}
+
+.ProfileDetails {
+  background-color: #b6d8b9;
+  padding: 0.5rem;
+}
+
+.ProfileLinks {
+  background-color: #b2d5f9;
+  padding: 0.5rem;
+}
+
+.ProfileSkills {
+  background-color: #f9c9c9;
+  padding: 0.5rem;
+}
+
+.ProfileLinks a {
+  display: block;
+  color: #007bff;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.ProfileSkills p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.EmailForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.EmailForm input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.EmailForm button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ModalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.ModalContent h3 {
+  margin-bottom: 15px;
+}
+
+.ModalContent form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.ModalContent form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.ModalContent button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ModalContent button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.ModalContent button[type="button"] {
+  background-color: #ccc;
+}

@@ -1,0 +1,36 @@
+.SideBar {
+  background-color: #0000ff;
+  display: flex;
+  align-items: flex-start;
+}
+
+.Menu-items {
+  display: flex;
+}
+
+.Menu-items ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  row-gap: 10px;
+}
+
+.Menu-items ul li {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Menu-items ul li p {
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .Text-title {
+    display: none;
+  }
+}

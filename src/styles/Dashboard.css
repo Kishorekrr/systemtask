@@ -1,0 +1,62 @@
+.Dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.Dashboard h3 {
+  text-align: start;
+  margin: 0 0 20px 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f4f4f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  flex-wrap: wrap;
+}
+
+.card h4 {
+  margin: 0;
+  font-size: clamp(14px, 2vw, 22px);
+  color: #333;
+}
+
+.card p {
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .Dashboard {
+    padding: 8px;
+  }
+}
